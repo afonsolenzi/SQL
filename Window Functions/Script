@@ -1,4 +1,5 @@
-Sql queries based on this article but runing on diferent dataset(Northwind) on this dataset i added a collumn for the salary and another one for job_description.
+Sql queries based on this bellow mentioned article, but running queries for a diferent dataset(Northwind).
+On this dataset i added a collumn for the salary and another one for job_description.
 Article: https://www.analyticsvidhya.com/blog/2020/12/window-function-a-must-know-sql-concept/
 
 
