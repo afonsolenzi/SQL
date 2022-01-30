@@ -1,4 +1,5 @@
 Sql queries based on this bellow mentioned article, but running queries for a diferent dataset(Northwind).
+Also the queries are focused on sql server instead of mysql as proposed in the article, to understand diferences.
 On this dataset i added a collumn for the salary and another one for job_description.
 Article: https://www.analyticsvidhya.com/blog/2020/12/window-function-a-must-know-sql-concept/
 
