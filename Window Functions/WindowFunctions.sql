@@ -1,3 +1,14 @@
+
+--Sql queries based on this bellow mentioned article, but running queries for a diferent dataset(Northwind).
+--Also the queries are focused on sql server instead of mysql as proposed in the article, to understand diferences.
+--On this dataset i added a collumn for the salary and another one for job_description.
+--For a fast step by step you can just follow allong with the dataset used in the article.
+--Article: https://www.analyticsvidhya.com/blog/2020/12/window-function-a-must-know-sql-concept/
+--Dataset: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases
+
+
+TESTS SCRIPTS
+
 --Suppose you want to determine the total salary of all the employees in the company
 use Northwind
 select sum(salary) as total_salary from Employees
@@ -28,7 +39,7 @@ ROW_NUMBER() over (PARTITION BY job_description ORDER BY salary) as "row_number"
 RANK() over (PARTITION BY job_description ORDER BY salary) as "rank_row"
 from employees
 
---The DENSE_RANK() function is similar to the RANK() except for one difference, it doesn’t skip any ranks when ranking rows.
+--The DENSE_RANK() function is similar to the RANK() except for one difference, it doesnâ€™t skip any ranks when ranking rows.
 select *, 
 ROW_NUMBER() over (PARTITION BY job_description ORDER BY salary) as "row_number" ,
 RANK() over (PARTITION BY job_description ORDER BY salary) as "rank_row",
@@ -42,7 +53,7 @@ select * from (select *,
 	DENSE_RANK() over (PARTITION BY job_description ORDER BY salary) as "dense_rank"
 	from employees) as tab where tab.rank_row = 3
 
---let’s find the quartile for each row based on the SALARY of the employee
+--letâ€™s find the quartile for each row based on the SALARY of the employee
 select *, 
 NTILE(4) over(order by salary) as "quartile"
 from Employees
