@@ -42,3 +42,10 @@ ROW_NUMBER() over (PARTITION BY job_description ORDER BY salary) as "row_number"
 RANK() over (PARTITION BY job_description ORDER BY salary) as "rank_row",
 DENSE_RANK() over (PARTITION BY job_description ORDER BY salary) as "dense_rank"
 from employees
+
+--Adapted nth for sql server
+select * from (select *, 
+	ROW_NUMBER() over (PARTITION BY job_description ORDER BY salary) as "row_number" ,
+	RANK() over (PARTITION BY job_description ORDER BY salary) as "rank_row",
+	DENSE_RANK() over (PARTITION BY job_description ORDER BY salary) as "dense_rank"
+	from employees) as tab where tab.rank_row = 3
