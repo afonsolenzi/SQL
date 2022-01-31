@@ -4,7 +4,7 @@
 --sql server to adapt the NTH function from Mysql using concatenated queries and where clause as a workaround.
 
 --In the Northwind dataset i added a collumn for the salary and another one for job_description.
---But if you just go straight to the pratice, you can just follow allong with the dataset used in the article.
+--But if you just wanna go straight to the pratice, you can just follow allong with the dataset used in the article.
 
 --Article: https://www.analyticsvidhya.com/blog/2020/12/window-function-a-must-know-sql-concept/
 --Dataset Northwind: https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases
